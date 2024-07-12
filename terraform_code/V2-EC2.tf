@@ -8,7 +8,9 @@ resource "aws_instance" "demo-server" {
   key_name      = "dpp"
   vpc_security_group_ids = [aws_security_group.demo-sg.id]
   subnet_id = aws_subnet.dpp-public_subnet_01.id
-  for_each = toset(["jenkins-master", "jenkins-slave", "ansible"])
+
+  // Need 3 ec2 instances for jenkins master, build-slave and ansible
+  for_each = toset(["jenkins-master", "build-slave", "ansible"])
    tags = {
      Name = "${each.key}"
    }
