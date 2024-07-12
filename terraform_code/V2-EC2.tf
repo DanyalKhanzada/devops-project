@@ -3,17 +3,21 @@ provider "aws" {
 }
 
 resource "aws_instance" "demo-server" {
-  ami           = "ami-06c68f701d8090592"
+  ami           = "ami-04a81a99f5ec58529"
   instance_type = "t2.micro"
   key_name      = "dpp"
-  security_groups = [ "demo-sg" ]
+  vpc_security_group_ids = [aws_security_group.demo-sg.id]
   subnet_id = aws_subnet.dpp-public_subnet_01.id
+  for_each = toset(["jenkins-master", "jenkins-slave", "ansible"])
+   tags = {
+     Name = "${each.key}"
+   }
 }
 
 resource "aws_security_group" "demo-sg" {
   name        = "demo-sg"
   description = "SSH Access"
-  vpc_id = aws_vpc.dpp-vpc
+  vpc_id = aws_vpc.dpp-vpc.id
 
   ingress {
     description = "SSH access"
@@ -56,7 +60,7 @@ resource "aws_subnet" "dpp-public_subnet_01" {
     }
 }
 
-resource "aws_subnet" "dpw-public_subnet_02" {
+resource "aws_subnet" "dpp-public_subnet_02" {
     vpc_id = aws_vpc.dpp-vpc.id
     cidr_block = "10.1.2.0/24"
     map_public_ip_on_launch = "true"
@@ -67,7 +71,7 @@ resource "aws_subnet" "dpw-public_subnet_02" {
 }
 
 //Creating an Internet Gateway 
-resource "aws_internet_gateway" "dpw-igw" {
+resource "aws_internet_gateway" "dpp-igw" {
     vpc_id = aws_vpc.dpp-vpc.id
     tags = {
       Name = "dpp-igw"
