@@ -1,3 +1,5 @@
 **/*.tfstate
 **/*.tfstate.*
 **/.terraform/*
+# Ignore Terraform provider binaries
+**/.terraform.lock.hcl
