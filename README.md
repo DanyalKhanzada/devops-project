@@ -50,7 +50,7 @@ Welcome to my DevOps project repository! This project showcases a complete CI/CD
 9. **Monitoring**:
     - Prometheus monitors the health and performance of the deployed application, while Grafana provides dashboards for visualizing the metrics collected by Prometheus.
 
-## **CONCLUSION**
+## **Conclusion**
 
 This project demonstrates the integration of various DevOps tools to create a robust CI/CD pipeline. The setup ensures automation, scalability, and maintainability, making it an ideal solution for continuous integration and continuous deployment needs.
 
