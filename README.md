@@ -2,9 +2,6 @@
 
 Welcome to my DevOps project repository! This project showcases a complete CI/CD pipeline using various modern tools and technologies, aimed at automating the software development lifecycle from code commit to deployment and monitoring. Below is a summary of the workflow and tools used.
 
-![image](https://github.com/user-attachments/assets/ae95ca8f-7ea7-403c-8ffe-11e300530a24)
-
-
 
 ## **Technologies Used**
 
@@ -50,6 +47,11 @@ Welcome to my DevOps project repository! This project showcases a complete CI/CD
 9. **Monitoring**:
     - Prometheus monitors the health and performance of the deployed application, while Grafana provides dashboards for visualizing the metrics collected by Prometheus.
 
+## **Source Code**
+
+The source code for this project is based on the **tweet-trend** application. You can find the complete source code and repository at the following link:
+[GitHub Repository](https://github.com/DanyalKhanzada/tweet-trend.git)
+
 ## **Conclusion**
 
 This project demonstrates the integration of various DevOps tools to create a robust CI/CD pipeline. The setup ensures automation, scalability, and maintainability, making it an ideal solution for continuous integration and continuous deployment needs.
@@ -60,7 +62,8 @@ Feel free to explore the repository and reach out if you have any questions or s
 
 ### **Diagram**
 
-*Include your DevOps architecture diagram here.*
+![image](https://github.com/user-attachments/assets/ae95ca8f-7ea7-403c-8ffe-11e300530a24)
+
 
 ---
 
