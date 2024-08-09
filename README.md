@@ -1,4 +1,4 @@
-# **DEVOPS Project Overview** 🚀
+# **DevOps Project Overview** 🚀
 
 Welcome to my DevOps project repository! This project showcases a complete CI/CD pipeline using various modern tools and technologies, aimed at automating the software development lifecycle from code commit to deployment and monitoring. Below is a summary of the workflow and tools used.
 
