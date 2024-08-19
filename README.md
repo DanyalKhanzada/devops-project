@@ -5,6 +5,7 @@ Welcome to my DevOps project repository! This project showcases a complete CI/CD
 
 ## **Technologies Used**
 
+- **AWS**
 - **GitHub** 📁
 - **Terraform** 🌍
 - **Ansible** 📝
